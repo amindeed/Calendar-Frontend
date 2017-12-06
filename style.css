@@ -1,0 +1,26 @@
+@media (max-width: 700px) {
+    .btn, .btn-group {
+        width:100%;
+    }
+}
+
+.container {
+    background-color: #dbe7f9;
+	padding: 20px 4px 15px 4px;
+}
+
+body {
+	padding: 10px 10px 2px 10px;
+}
+
+.table > tbody > tr > td,
+.table {
+    border-bottom: black solid 1px;
+    border-top: black solid 1px;
+}
+
+.table > thead > tr > th,
+.table {
+    border-bottom: black solid 2px;
+    border-top: black solid 2px;
+}

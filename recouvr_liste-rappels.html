@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+  
+  <title>Gestionnaire des Rappels de Relance de Paiement</title>
+</head>
+<body>
+	
+    <h3 class="text-center">Gestionnaire des Rappels de Relance de Paiement</h3><br />
+
+<div class="container rounded">
+
+	<h4>Liste des rappels programmés</h4><br />
+
+	<table class="table table-striped">
+	  <thead>
+		<tr>
+		  <th scope="col"></th>
+		  <th scope="col">Date</th>
+		  <th scope="col">Titre</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;<i class="fa fa-trash-o" aria-hidden="true"></i></td>
+		  <td>22/12/2017</td>
+		  <td>Rappel paiement Company 1</td>
+		</tr>
+		<tr>
+		  <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;<i class="fa fa-trash-o" aria-hidden="true"></i></td>
+		  <td>25/12/2017</td>
+		  <td>Rappel paiement Company 2</td>
+		</tr>
+		<tr>
+		  <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;<i class="fa fa-trash-o" aria-hidden="true"></i></td>
+		  <td>27/12/2017</td>
+		  <td>Rappel paiement Company 3</td>
+		</tr>
+	  </tbody>
+	</table>
+
+</div>	
+
+<script>
+	$(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		date_input.datepicker({
+			format: 'yyyy/mm/dd',
+			todayHighlight: true,
+			autoclose: true,
+			startDate: new Date(),
+			weekStart: 1,
+			daysOfWeekHighlighted: "0"
+		})
+	})
+</script>
+
+</body>
+</html>
