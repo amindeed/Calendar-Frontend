@@ -15,7 +15,7 @@
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
   
-  <title>Gestionnaire des Rappels de Relance de Paiement</title>
+  <title>Liste des Rappels - Gestionnaire des Rappels de Relance de Paiement</title>
 </head>
 <body>
 	
@@ -23,7 +23,23 @@
 
 <div class="container rounded">
 
-	<h4>Liste des rappels programmés</h4><br />
+	<h4><i class="fa fa-list-alt" aria-hidden="true"></i> Liste des Rappels</h4><br />
+
+	<form class="form-inline">
+	  <label class="mr-sm-2" style="font-weight:bold">Rappels programmés jusqu'au :</label>
+	  <div class="input-group">
+        <div class="input-group-addon mb-2 mb-sm-0">
+         <i class="fa fa-calendar"></i>
+        </div>
+        <input class="form-control mr-sm-2 mb-2 mb-sm-0" id="date" name="date" placeholder="Sélectionner une date" type="text"/>
+       </div>
+	  
+	  <button type="submit" class="btn btn-primary">Lister</button>
+	</form>
+
+<br>
+	
+
 
 	<table class="table table-striped">
 	  <thead>
@@ -58,7 +74,7 @@
 	$(document).ready(function(){
 		var date_input=$('input[name="date"]'); //our date input has the name "date"
 		date_input.datepicker({
-			format: 'yyyy/mm/dd',
+			format: 'dd/mm/yyyy',
 			todayHighlight: true,
 			autoclose: true,
 			startDate: new Date(),
