@@ -6,7 +6,7 @@ Best suited for users (typically office users), who are more tied to their deskt
 The user will receive a notification from `calendar-notification@google.com` to his Google Mail inbox on the selected date. These notifications can then be easily [filtered](https://support.google.com/mail/answer/6579?hl=en) and forwarded to any other email address.
 
 ## Installation
-
+### Manual :
 1. While logged in to your Google account, go to [Apps Script Dashboard](https://script.google.com/) and create a new project by clicking on **`+ New script`**.
 2. Create a script file *`calendar-frontend.gs`* under the project and copy the content of **[`calendar-frontend.js`](calendar-frontend.js)** into it.
 3. Create a HTML file *`index.html`* and copy the content of **[`index.html`](index.html)** into it.
@@ -17,6 +17,22 @@ The user will receive a notification from `calendar-notification@google.com` to 
     - Click **Update**
 5. Go to the URL under **`Current web app URL`** (web app URL)
 6. Confirm Apps Scripts authorizations.
+
+### Command Line :
+Using [`clasp`](https://github.com/google/clasp#install) command line tool :
+
+```bash
+clasp login
+clasp create --type webapp --title "Calendar Frontend Dev"
+# Copy the URL of the created Apps Script project
+clasp push --force
+# Go to the Apps Script project URL
+clasp deployments
+# 1. Copy the deployment ID of @HEAD (dev version with latest code). 
+# 2. Go to either :
+#  - G-Suite Account : https://script.google.com/a/{yourdomain.com}/macros/s/{Deployment-ID}/dev
+#  - Free Account : https://script.google.com/macros/s/{Deployment-ID}/dev
+```
 
 ## Demo
 
@@ -31,8 +47,7 @@ To later revoke app's access to your data, follow the steps described here: [Rev
 ## TO DO
 - [ ] Select due time (current version set the reminder to 8:00AM)
 - [ ] List, edit and delete created/upcoming reminders
-- [ ] Publish the application as "API Executable" for authenticated access without having to be logged in to a Google account.
-- [ ] Logs in a standard format
+
 
 ## Used components
 
