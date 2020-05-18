@@ -1,10 +1,10 @@
 /**
- * @name Calendar Frontend
- * @version 0.1
- * @desc Backend code of Calendar Frontend
- * @author Amine Al Kaderi alkaderi@amindeed.com
- * @license GNU GPLv3 license
- */
+ * Name 		:	Calendar Frontend
+ * Version 		:	0.1
+ * Descriton 	:	Backend code of Calendar Frontend
+ * Author 		:	Amine Al Kaderi <alkaderi@amindeed.com>
+ * License 		:	GNU GPLv3 license
+*/
 
 function doGet() {
   return HtmlService.createHtmlOutputFromFile('index.html');
