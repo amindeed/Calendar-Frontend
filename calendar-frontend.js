@@ -1,9 +1,9 @@
 /**
- * Name 		:	Calendar Frontend
- * Version 		:	0.1
- * Descriton 	:	Backend code of Calendar Frontend
- * Author 		:	Amine Al Kaderi <alkaderi@amindeed.com>
- * License 		:	GNU GPLv3 license
+ * Name         :	Calendar Frontend
+ * Version      :	0.1
+ * Descriton    :	Backend code of Calendar Frontend
+ * Author       :	Amine Al Kaderi <alkaderi@amindeed.com>
+ * License      :	GNU GPLv3 license
 */
 
 function doGet() {
